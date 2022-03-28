@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
         padding-top: 50px;
         justify-content: space-between;
         align-items: center;
-        font-size: 2em;
+        font-size: 1.5em;
         font-weight: bold;
         font-family: 'Luminari';
         flex-direction: column;

@@ -1,31 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'box',
   template: `
-    <div class='box'>
-    </div>
+  <div class="boxWrap">
+    <button class='box'>
+      {{value}}
+    </button>
+  </div>
   `,
   styles: [
     `
+      .boxWrap {
+        height: 140px;
+        width: 140px;
+      }
       .box {
         border: 1px solid grey;
         height: 140px;
         width: 140px;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        font-family: inherit;
+        color: inherit;
+        font-size: 1.5em;
       }
     `
   ]
 })
-export class BoxComponent implements OnInit {
+export class BoxComponent {
 
   constructor() { }
 
-  increment() {
-    // TODO: Dispatch an increment action
-  }
-
-  ngOnInit(): void {
-  }
+  @Input() value: 'X' | "O";
 
 }
